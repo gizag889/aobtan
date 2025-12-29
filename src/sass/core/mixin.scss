@@ -1,0 +1,118 @@
+@charset "UTF-8";
+@use "../core/mediaQuery" as*;
+
+@mixin btn--white {
+    position: relative;
+    display: inline-block;
+    width: 240px;
+    max-width: 100%;
+    padding: 22px 82px;
+    background: #fff;
+    border: 1px solid #000000;
+    font-family: Zen Kaku Gothic New;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.0;
+    border-radius: 10px;
+    cursor:pointer;
+    // inlinblockの性質、css設計p241
+    // text-align: left;
+    &:hover {
+        color: white;
+        background: #000000;
+        border: 1px solid #000000;
+        &::after{
+            color: #fff;
+            font-size: 50px;
+        }
+    }
+    &::after {
+        content: '•'; /* ドット文字 */
+        position: absolute;
+        top: 50%;
+        right: 2.5%;
+        transform: translate(-50%, -50%);
+        font-size: 40px; /* ドットのサイズ */
+        color: #000000; /* 黒いドット */
+       
+    }
+   
+}
+@mixin btn--blue {
+    position: relative;
+    display: inline-block;
+    width: 284px;
+    max-width: 100%;
+    padding: 22px 0;
+    background: #4282B8;
+    border: 1px solid #4282B8;
+    font-family: Zen Kaku Gothic New;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    line-height: 1.0;
+    border-radius: 10px;
+    cursor:pointer;
+    text-align: center;
+    // inlinblockの性質、css設計p241
+    // text-align: left;
+    &:hover {
+        color: #4282B8;
+        background: white;
+        border: 1px solid #4282B8;
+        &::after{
+            color: #4282B8;
+            font-size: 50px;
+        }
+    }
+    &::after {
+        content: '•'; /* ドット文字 */
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+        font-size: 40px; /* ドットのサイズ */
+        color: white; /* 黒いドット */
+       
+    }
+   
+}
+@mixin title--main {
+    position: absolute;
+    top: 44px;
+    font-family: Kanit;
+    font-size: 128px;
+    font-weight: 700;
+    line-height: 1.0;
+    text-align: left;
+    color: transparent;
+  -webkit-text-stroke: 1px #4282B8;
+    @include max(exlg) {
+        font-size: 106px;
+    }
+    @include max(lg){
+        font-size: 87.556px;
+    }
+    @include max(sm){
+        font-size: 72px;
+    }
+   
+}
+@mixin title--sub {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    font-family: Zen Kaku Gothic New;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    color:#000 ;
+    -webkit-text-stroke: 0px #000;
+    @include max(lg){
+        font-size: 20px;
+    }
+   
+}
+
+

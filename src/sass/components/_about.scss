@@ -1,0 +1,161 @@
+@charset "UTF-8";
+@use "../core/mixin.scss" ;
+@use "../core/mediaQuery" as*;
+
+.about-aobtn {
+    position: relative;
+    margin-top: 71px;
+    @include max(exlg) {
+        margin-top: 56px;
+    }
+    @include max(lg) {
+        margin-top: 40px;
+    }
+    @include max(md) {
+        padding-left: 20px;
+    }
+  &__inner {
+    @include max(lg) {
+        margin-top: 120px;
+    }
+    @include max(sm){
+        margin-top: 126px;
+    }
+    @include max(exsm){
+        margin-top: 140px;
+    }
+  }
+ 
+
+  &__sentense {
+    padding-top: 212px;
+    font-family: Zen Kaku Gothic New;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    text-align: left;
+    max-width: 430px;
+    @media screen and (min-width: 1700px) {
+        max-width: 500px;
+        line-height: 2.0;
+    }
+    @include max(lg){
+        padding-top: 180px;
+    }
+    @include max(sm){
+        padding-top: 150px;
+        font-size: 14px;
+        padding-right: 20px;
+    }
+  }
+
+  &__btn-wrapper {
+    padding-top: 40px;
+    @include max(sm) {
+        padding-top: 32px;
+    }
+  }
+
+
+}
+
+.about-verticalCopy {
+    position: absolute;
+    top: -303px;
+    right: 0;
+    writing-mode: vertical-rl;
+    z-index: 110;
+    background: #F8F8F8;
+    font-family: Zen Kaku Gothic New;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0.5em;
+    text-align: left;
+    margin-right: 130px;
+    @include max(exlg) {
+        font-size: 32px;
+        top: -230px;
+        margin-right: 50px;
+    }
+    @include max(lg){
+        top: -180px;
+    }
+    @include max(md){
+        font-size: 24px;
+    }
+    @include max(sm) {
+        top: -280px;
+        margin-right: 30px;
+    }
+  @include max(exsm){
+    top: -280px;
+  }
+    @media (min-width: 1300px) {
+        
+         margin-right: calc(6.25rem + ((1vw - 13px) * 57.1429));
+         min-height: 0vw;
+       
+     }
+     @media (min-width: 1440px) {
+         margin-right: 180px;
+     }
+     
+}
+
+.about-verticalCopy__wrapper {
+    padding: 26px 40px;
+    @include max(exlg) {
+        padding: 16px 24px;
+    }
+    @include max(exsm){
+        padding-top: 20px;
+    }
+}
+
+.about-verticalCopy--first {
+    display: inline-block;
+    color: #4282B8;
+    padding-left: 10px;
+}
+.about-verticalCopy--first span {
+    color: #000;
+}
+.about-verticalCopy--sec {
+    color: #000;
+    letter-spacing: 1.5;
+}
+
+.about-aobtn__pic {
+    position: absolute;
+    z-index: 112;
+    margin-top: 198px;
+    margin-right: 10px;
+    // margin-left: 625px;
+    content: '';
+    background-image: url("./img/interview.png");
+    display: inline-block;
+    width: 161px;
+    height: 213px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include max(exlg) {
+        width: 130px;
+        height: 176.79px;
+    }
+    @include max(lg){
+        top: -120px;
+        width: 100px;
+        height: 150px;
+    }
+    @include max(sm){
+        top:-30px
+        
+    }
+    @include max(exsm) {
+        top: -60px;
+        width: 60px;
+        height: 80px;
+        margin-right: 0;
+    }
+
+}

@@ -1,0 +1,16 @@
+
+@charset "UTF-8";
+
+@use "../core/mixin.scss" as *;
+@use "../core/mediaQuery" as*;
+
+
+.aobtn-wrapper {
+    display: flex;
+    @include max(md) {
+        display: block;
+    }
+}
+// * {
+//     outline: 1px solid red;
+// }

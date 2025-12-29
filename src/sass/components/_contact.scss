@@ -1,0 +1,222 @@
+
+@charset "UTF-8";
+@use "../core/mixin.scss";
+@use "../core/mediaQuery" as*;
+
+.contact-aobtn {
+    // padding-top: 132px;
+    margin-top: 132px;
+    position: relative;
+    @include max(exsm){
+        margin-top: 40px;
+    }
+}
+.contact-aobtn__pic {
+   
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    content: '';
+    content: url("./img/financing_01.png");
+    background-size: contain;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 175px;
+    height: auto;
+    @media screen and (min-width: 1500px){
+        right: 18%;
+    }
+    @include max(exlg){
+        width: 135.25px;
+        top: -10%;
+        right: 10%;
+    }
+    @media (max-width: 800px) {
+        right: 10%;
+        width: 90px;
+    }
+    @include max(md){
+        top: -25px;
+        right: 15%;
+      
+    }
+    // @media screen and (max-width: 640px){
+    //     right: -5%;
+    //     background-size: 90px;
+    //     top: -55px;
+    // }
+    @media screen and (max-width: 500px){
+        right: 3%;
+        top: -70px;
+    }
+    @include max(exsm){
+        background-size: contain;
+        width: 59px;
+        height: 86px;
+        left: 80%;
+        top: -3%;
+    }
+  
+    
+    
+ 
+}
+ .container--contactBg {
+
+    border-radius: 50px 0px 0px 50px;
+    background: #F8F8F8;
+    // height: 364px;
+    // variables.$base-spacing--right分の相殺
+    // margin-right: -20px;
+    @include max(md){
+        margin-top: 40px;
+        border-radius: 0;
+    }
+}
+.contact-aobtn__inner {
+    padding-top: 32px;
+    padding-left: 20px;
+    // padding-right: 20px;
+}
+
+.contact-aobtn__title{
+    padding-top: 42px;
+}
+.contact-aobtn__title-inner {
+    position: relative;
+}
+.contact-aobtn__title-inner::before {
+    position: absolute;
+    content: "お問い合わせ";
+    top:-20px;
+}  
+.contact-aobtn__access-wrapper {
+    padding-top: 177px;
+    display: flex;
+    padding-bottom: 53px;
+    @include max(lg){
+        flex-direction: column;
+        padding-bottom: 41px;
+    }
+    @include max(exsm){
+        padding-top: 120px;
+    }
+}
+.contact-aobtn__access-wrapper
+.contact-aobtn__access:nth-of-type(2){
+    padding-left: 28px;
+    @include max(exlg){
+        padding-left: 20pxw;
+    }
+    @include max(lg) {
+        padding-left: 0;
+        flex-direction: column;
+        padding-top: 24px;
+        border-bottom: none;
+    }
+}
+.contact-aobtn__access{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @include max(lg) {
+        flex-direction: row;
+        align-items: baseline;
+        padding-bottom: 36px;
+        border-bottom: 2px solid #000000;
+    }
+    @include max(sm){
+        padding-bottom: 26px;
+    }
+} 
+
+
+.contact-aobtn__access-bar {
+    
+    padding-left: 35px;
+    margin-top: -10px;
+    
+    border-right: 1px solid #000000;
+    height: 68px;
+    @include max(exlg){
+        padding-left: 20px;
+    }
+    @include max(lg){
+        display: none;
+    }
+}
+.contact-aobtn__access--main{
+ 
+    font-family: Kanit;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.0;
+    text-align: left;
+}
+.contact-aobtn__access--sub{
+    padding-top: 8px;
+    font-family: Zen Kaku Gothic New;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.0;
+    text-align: left;
+    @include max(lg){
+        padding-left: 16px;
+        display: flex;
+    }
+}
+.contact-aobtn__access:nth-of-type(2)
+.contact-aobtn__access--sub{
+    @include max(lg){
+        padding-left: 0;
+}
+}
+.contact-aobtn__mail {
+    display: inline-block;
+    border-radius: 10px;
+    margin-left: 64px;
+    font-family: Zen Kaku Gothic New;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.0;
+    text-align: left;
+    padding: 22px 40px 22px 68px;
+    background: #fff;
+    position: relative;
+    @include max(exlg){
+        margin-left: 20px;
+     }
+   
+    @include max(lg){
+        margin-left: 0;
+    }
+
+    @include max(sm){
+        margin-top: 10px;
+    }
+    @include max(exsm){
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    &::after {
+    position: absolute;
+    content: '';
+    right: 25px;
+   
+
+    }
+   
+}
+.contact-aobtn__mail::before {
+    position: absolute;
+    content: '';
+    background-image: url("./img/mail-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    left: 40px;
+}
+

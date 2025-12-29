@@ -1,0 +1,207 @@
+@charset "UTF-8";
+@use "../core/mixin.scss";
+@use "../core/mediaQuery" as*;
+
+// *{
+//     outline: 3px solid red;
+// }
+.footer-aobtn {
+    padding-top: 80px;
+    padding-bottom: 26px;
+    padding-left: -20px;
+    @include max(md) {
+        padding-left: 20px;
+    }
+    @include max(sm){
+        padding-top: 30px;
+        padding-left: 0;
+    }
+    @include max(exsm){
+        padding-top: 0;
+    }
+}
+.footer-aobtn__inner {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    @media screen and (min-width: 1500px) {
+        justify-content: center;
+        column-gap: 150px;
+    }
+    @include max(sm){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+.footer-aobtn-access {
+    padding-top: 33px;
+    @include max(md){
+        padding: 0 20px;
+    }
+    @include max(sm) {
+        text-align: center;
+       
+    }
+    @include max(exsm){
+        padding-top: 20px;
+    }
+}
+
+.footer-aobtn-access__pic {
+    width: 222px;
+    height: 133px;
+ 
+}
+
+.footer-aobtn-access-wrapper {
+    padding-top: 39px;
+    font-family: Zen Kaku Gothic New;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    text-align: left;
+    @include max(sm) {
+        padding-top: 25px;
+        text-align: center;
+        line-height: 2.5;
+        font-size: 12px;
+    }
+}
+.footer-aobtn-access-wrapper br {
+    display: none;
+    @include max(sm){
+        display: block;
+    }
+}
+
+
+
+.footer-aobtn-menu {
+    position: relative;
+    padding-left: 109px;
+    padding-top: 58px;
+    @media screen and (min-width: 1500px) {
+        padding-left: 0;
+    }
+    //     padding-left: 0;
+    //     padding-right: 20px;
+    // }
+   
+    @media screen and (max-width: 1385px) {
+        padding-left: 20px;
+    }
+    @media screen and (max-width: 1300px) {
+        padding-left: 80px;
+        padding-top: 0;
+    }
+    @include max(sm){
+        text-align: center;
+        padding-left: 0;
+        padding-top: 55px;
+        margin-inline: auto;
+    }
+
+   
+}
+.footer-aobtn-menu__inner {
+    
+    @media screen and (max-width: 1300px){
+        padding-bottom: 0;
+    }
+
+}
+.footer-aobtn-menu__item{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    @include max(sm){
+         flex-direction: column;
+         text-align: center;
+         align-items: center;
+    }
+  
+}
+
+.footer-aobtn-menu__item:last-child {
+    padding-bottom: 0;
+}
+.footer-aobtn-menu__item li {
+    padding-right: 24px;
+    padding-bottom: 40px;
+
+    @include max(sm){
+        padding-right: 0;
+        padding-bottom: 30px;
+        text-align: center;
+        margin-inline: auto;
+    }
+  
+}
+.footer-aobtn-menu__item-mail {
+    position: relative;
+    padding-left: 28px;
+    @include max(sm){
+        padding-left: 0;
+    }
+}
+.footer-aobtn-menu__item-mail::before {
+    position: absolute;
+    content: '';
+    background-image: url("./img/mail-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    left: 0;
+   
+    // bottom: 3px;
+    @include max(sm){
+        left: -33%;
+        top: -2%;
+    }
+    
+}
+.footer-aobtn-menu__item br {
+    display: none;
+    @media screen and (max-width: 1310px) {
+        display: block;
+    }
+}
+
+
+.aobtn-rights {
+    position: absolute;
+    width: 110px;
+    display: inline-block;
+    bottom: -30%;
+    right: -5%;
+    @media screen and (max-width: 1300px){
+        right: 5%;
+        
+        bottom: 0;
+    }
+    @include max(sm){
+        bottom: 0;
+        top:100%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    @include max(exsm){
+        bottom: -25px;
+    }
+   
+ 
+}
+.aobtn-rights small {
+    font-family: Zen Kaku Gothic New;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.0;
+    color: #000000;
+    @include max(exsm){
+        font-size: 12px;
+    } 
+}

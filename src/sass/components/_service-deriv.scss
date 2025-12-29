@@ -1,0 +1,239 @@
+@charset "UTF-8";
+
+@use "../core/mixin.scss" as *;
+@use "../core/mediaQuery" as*;
+
+
+
+main {
+    width: 100%;
+  }
+.service-deriv.fv__pic--catch{
+   
+    content: url('./img/Firefly60602 1.png');
+    aspect-ratio: 1100 / 671;
+    width: 100%;
+    height: 100%;
+  
+    @include max(md){
+        padding-left: 20px;
+    }
+   @include max(sm){
+    padding: 0 20px;
+   }
+}
+.service-deriv.fv-back--blue:before{
+    height: 39.1vw;
+    width: 50.49vw;
+}
+.service-deriv-info {
+    padding-top: 50px;
+    @include max(exlg){
+        padding: 58px  20px 0;
+    }
+    @media screen and (min-width: 1500px){
+        position: relative;
+    }
+}
+.service-deriv-info-contents {
+    position: relative;
+}
+.service.deriv-contents__pic{
+    position: absolute;
+    top: 0;
+    right: 27%;
+    display: inline-block;
+    // height: 100%;
+    // width: 100%;
+    aspect-ratio: 165/203;
+    object-fit: contain;
+    background-repeat: no-repeat;
+   
+    content: url("./img/paperless_01 1.png");
+    background-size: contain;
+  
+    @media screen and (min-width: 1500px) {
+        top: 0;
+        right: 15%;
+    }
+    @include max(exlg){
+        right: 20%;
+    }
+   @include max(lg){
+    width: 20%;
+   }
+    @media screen and (max-width: 900px){
+        right: 5%;
+    }
+
+    @include max(sm){
+        top: -1%;
+      
+    }
+    @media screen and (max-width: 400px){
+        top: -0.7%;
+    }
+}
+.service-deriv-info-contents--main {
+    padding-top: 80px;
+}
+.service-deriv-info-contents--main--sec{
+    padding-top: 70px;
+}
+.service-deriv-info-contents--main--third{
+    padding-top: 70px;
+}
+
+.service-deriv-info__pic-main img{
+    @media screen and (max-width: 1300px){
+        max-width: 900px;
+    }
+    @include max(exlg){
+        width: 100%;
+    }
+   
+}
+.service-deriv-info-contents__title {
+    font-family: Zen Kaku Gothic New;
+font-size: 24px;
+font-weight: 700;
+line-height: 1.0;
+text-align: left;
+margin: 0 45px;
+padding-top: 55px;
+@include max(exlg){
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+
+
+
+}
+.service-deriv-info-contents {
+    max-width: 960px;
+    
+    @media screen and (min-width: 1500px) {
+        margin-inline: auto;
+    }
+}
+
+.service-deriv-info-contents__inner {
+    border-top: 1px solid #B1C6DC;
+    margin: 39px 40px 0 50px;
+    @include max(exlg){
+        margin: 0;
+    }
+  
+}
+.service-deriv-info-contents__sentense{
+   padding-top: 20px;
+    display: flex;
+    // align-items: flex-start;
+    // justify-content: space-between;
+    gap: 52px;
+    @media screen and (max-width: 1218px){
+        flex-direction: column;
+    }
+}
+.service-deriv-info-contents-head {
+    width: 360px;
+    font-size: 20px;
+    line-height: 1.8;
+    @media screen and (max-width: 1218px){
+        width: 100%;
+        text-align: left;
+    }
+}
+.service-deriv-info-contents-head br {
+    @include max(lg){
+        display: none;
+    }
+}
+
+.service-deriv-info-contents-sub {
+    max-width: 446px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    @media screen and (max-width: 1218px){
+        max-width: 100%;
+
+    }
+}
+
+.service-deriv-info-contents__pic-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 62px;
+    padding-right: 20px;
+    @include max(lg){
+        gap: 20px;
+        padding-right: 0;
+    }
+    @media screen and (max-width: 826px){
+        flex-direction: column;
+    }
+}
+
+.service-deriv-info-contents__pic-wrapper--01 {
+    padding-top: 88px;
+    @include max(exlg){
+        padding-top: 73.04px;
+    }
+    @include max(lg){
+        padding-top: 59px;
+    }
+    @include max(sm){
+        padding-top: 42.48px;
+    }
+}
+.service-deriv-info-contents__pic-wrapper--02 {
+    padding-top: 147px;
+    @include max(exlg){
+        padding-top: 73.04px;
+    }
+    @include max(lg){
+        padding-top: 59px;
+    }
+    @include max(sm){
+        padding-top: 42.48px;
+    }
+}
+.service-deriv-info-contents__pic-wrapper--03 {
+    padding-top: 146px;
+    @include max(exlg){
+        padding-top: 73.04px;
+    }
+    @include max(lg){
+        padding-top: 59px;
+    }
+    @include max(sm){
+        padding-top: 42.48px;
+    }
+}
+.service-deriv-info-contents__pic img {
+    aspect-ratio: 352/272;
+    width: 100%;
+    height: 100%;
+    @include max(sm){
+        width: 60%;
+    }
+}
+
+
+.service-deriv-info-contents__main-caption {
+    padding-bottom: 20px;
+}
+
+.service-deriv-info-contents__sub-caption {
+    padding-top: 20px;
+    font-weight: 400;
+    line-height: 1.0;
+    font-size: 14px;
+}
+
+
+.service-deriv.contact-aobtn {
+    margin-top: 68px;
+}

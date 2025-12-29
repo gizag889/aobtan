@@ -1,0 +1,66 @@
+@charset "UTF-8";
+@use "../core/mixin.scss" ;
+@use "../core/mediaQuery" as*;
+
+
+.swiper {
+  //  width: 1160px;
+  width: 100%;
+    margin-top: 76px;
+    @include max(exlg) {
+      margin-top: 56px;
+    }
+    @include max(lg){
+      margin-top: 40px;
+    }
+
+    @include max(sm){
+      margin-top: 68px;
+    }
+    
+}
+
+.swiper__container {
+    background: #F8F8F8;
+    padding: 63px 0;
+    @include max(exlg) {
+      padding: 48px 0;
+    }
+    @include max(lg) {
+      padding: 32px 0;
+    }
+    @include max(md){
+      padding: 64px 0;
+     
+    }
+    @include max(sm){
+      padding: 16px 0 58px 0;
+    }
+   
+}
+.swiper-wrapper {
+
+    -webkit-transition-timing-function:linear!important; -o-transition-timing-function:linear!important; transition-timing-function:linear!important; 
+    transition-timing-function: linear;
+  }
+  
+  .swiper-slide {
+    max-width: 360px;
+    line-height: 360px;
+    @include max(exlg) {
+      max-width: 262px;
+      line-height: 262px;
+    }
+    @include max(lg){
+      max-width: 192px;
+      line-height:192px;
+    }
+  }
+  .swiper-slide img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+   
+  }
+
+  

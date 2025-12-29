@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@use "../core/mixin.scss" as *;
+@use "../core/mediaQuery" as*;
+
+
+
+body {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    z-index: -999;
+}
+// main {
+//   @include max(md) {
+//     margin-top: 100px;
+//   }
+// }
+
+.container {
+  // max-width: 1160px;
+  // max-width: 1640px;
+  width: 100%;
+  @include max(md) {
+    max-width: 768px;
+  }
+}
+.aobtn__title {
+    position: relative;
+}
+.aobtn__title--sub {
+    @include title--sub;
+  }
+
+.aobtn__title--main {
+    @include title--main;
+  }
+
+  .aobtn__btn--white--dot {
+    @include btn--white;
+  
+}
+// .aobtn__btn--white--dot:hover{
+//   color: white;
+//   background: #000000;
+//   border: 1px solid #000000
+// }

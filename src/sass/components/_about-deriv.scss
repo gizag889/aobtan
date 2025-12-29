@@ -1,0 +1,475 @@
+@charset "UTF-8";
+
+@use "../core/mixin.scss" as *;
+@use "../core/mediaQuery" as*;
+
+
+.about-deriv.fv__pic--catch{
+    content: url('./img/about-us 1.png');
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1120 / 671;
+    @include max(md){
+        padding-left: 20px;
+    }
+    @include max(sm){
+        padding-top: 20px;
+        padding-right: 20px;
+        display: inline-block;
+     
+    } 
+}
+
+  
+
+.about-deriv.fv-back--blue:before{
+    height: 39.1vw;
+    width: 50.49vw;
+}
+.deriv-contents{
+
+    padding-top: 68px;
+    position: relative;
+    padding-right: 20px;
+    @include max(md){
+        padding-left: 20px;
+    }
+}
+
+.deriv-contents__title {
+    font-family: Zen Kaku Gothic New;
+    font-weight: 700;
+    line-height: 1.0;
+    text-align: left;
+    font-size: 20px;
+    color: #000000;
+    @media (min-width: 1920px) {
+       
+          font-size: 32px;
+        
+      }
+    @media screen and (min-width: 1500px) {
+        position: absolute;
+       left: 0;
+    }
+    @media (min-width: 375px) {
+       
+        font-size: calc(1.25rem + ((1vw - 3.75px) * 1.8779));
+        min-height: 0vw;
+     
+      }
+      @media (min-width: 1440px) {
+      
+          font-size: 40px;
+       
+      }
+     
+     
+
+}
+.deriv-contents__title--main {
+    font-size: 40px;
+    @include max(sm){
+        font-size: 32px;
+    }
+}
+.deriv-contents__inner {
+    position: relative;
+    @media screen and (min-width: 1500px) {
+        padding-top: 50px;
+
+    }
+    @media screen and (min-width:1700px){
+        margin-left: 350px;
+    }
+ 
+    
+}
+.about.deriv-contents__pic{
+    position: absolute;
+    top: -13%;
+    right: 38.4%;
+    display: inline-block;
+    height: auto;
+    width: 165px;
+    object-fit: contain;
+    background-repeat: no-repeat;
+   
+    content: url("./img/offline-hearing_01 1.png");
+    background-size: contain;
+  
+    @media screen and (min-width: 1500px) {
+        top: 2%;
+        right: 29%;
+    }
+    @include max(exlg){
+        right: 20%;
+    }
+    @media screen and (max-width: 900px){
+        right: 5%;
+    }
+    @include max(md){
+        width: 100px;
+    }
+    @include max(sm){
+        top: -24%;
+    }
+}
+
+.deriv-contents__sentense {
+    padding-top: 64px;
+    font-family: Zen Kaku Gothic New;
+font-size: 16px;
+font-weight: 400;
+line-height: 1.8;
+text-align: left;
+// text-align: center;
+// @media screen and (min-width: 1800px) {
+ //     text-align: center;
+// }
+}
+.service.deriv-contents__sentense {
+    max-width: 422px;
+}
+.sp-br {
+    display: none;
+    @include max(sm){
+        display: block;
+    }
+}
+
+
+.deriv-contents-nav{
+    padding-top: 64px;
+    @media screen and (max-width: 600px) {
+        padding-top: 32px;
+    }
+}
+.deriv-contents-nav__inner{
+    display: flex;
+    align-items: stretch;
+  
+    gap: 24px;
+    @include max(lg){
+        gap: 10px;
+    }
+    @media screen and (max-width:850px){
+        justify-content: space-between;
+        width: 100%;
+    }
+    @include max(sm){
+        gap: 12px;
+    }
+    .deriv-contents-nav__inner a {
+        display: flex;
+        text-align: center;
+        flex: 1;
+        flex-grow: 1;
+    }
+}
+
+.deriv-contents-nav__child{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+    position: relative;
+    font-family: Zen Kaku Gothic New;
+    font-size: 16px;
+    font-weight: 400;
+    width: 208px;
+    padding: 11px 0 34px;
+    border: 1px solid #4282B8;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease; // スムーズな遷移のためのトランジション
+    cursor: pointer;
+  
+    @media screen and (max-width: 850px){
+        width: 175px;
+    }
+    @include max(sm){
+        width: 150px;
+        font-size: 12px;
+        padding-bottom: 20px;
+    }
+    @media screen and (max-width: 500px){
+        width: 130px;
+    }
+    @media screen and (max-width: 440px){
+        width: 100px;
+    }
+    &:hover {
+        background-color: #4282B8; // ホバー時の背景色
+        color: #fff; // ホバー時の文字色
+        border-color: #fff; // ホバー時の枠線の色
+
+        .deriv-contents-nav__arrow--down {
+            border-color: #fff; // 矢印の色も変更
+        }
+    }
+}
+.deriv-contents-nav__child br {
+    display: none;
+    @include max(sm){
+        display: block;
+       
+    }
+}
+
+.deriv-contents-nav__arrow--down{
+    position: absolute;
+    bottom: 20%;
+    left: 48%;
+    transform: translateX(-50%);
+    display: inline-block;
+    vertical-align: middle;
+    color: #4282B8;
+    width: 7px;
+    height: 7px;
+    border: 2px solid #4282B8;
+    border-left: 0;
+    border-bottom: 0;
+    box-sizing: border-box;
+    transform: translateY(-25%) rotate(135deg);
+    @include max(sm){
+        bottom: 10%;
+    }
+}
+
+
+.about-deriv-contents-phil {
+    padding-top: 80px;
+  
+
+}
+.about-deriv-contents__title--sub {
+    font-size: 32px;
+  
+    @include max(sm){
+        font-size: 24px;     
+    }
+}
+.about-deriv-contents__title--phil{
+    @include max(md){
+        padding-left: 20px;
+    }
+}
+
+.about-deriv-contents-phil__inner {
+    padding-top: 64px;
+    @media screen and (min-width: 1800px) {
+        text-align: center;
+    }
+    @include max(md){
+        text-align: center;
+    }
+    @include max(sm){
+        padding-top: 30px;
+    }
+   
+}
+.about-deriv-contents-phil__pic {
+    width: 923px;
+    @include max(exlg){
+        width: 700px;
+    }
+    @include max(lg){
+        width: 600px;
+    }
+    @media screen and (max-width: 600px) {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+.about-deriv-contents-overview {
+    padding-top: 47px;
+    @include max(md){
+        padding-left: 20px;
+    }
+}
+.about-deriv-contents-overview__inner {
+    display: flex;
+    padding-top: 64px;
+    padding-right: 20px;
+    gap: 157px;
+    @media screen and (min-width: 1800px){
+        margin-left: 250px;
+    }
+    @media screen and (max-width: 1200px){
+        gap: 40px
+    }
+    @include max(lg){
+        flex-direction: column-reverse;
+    }
+}
+.about-deriv-contents-overview__inner p{
+    display: block;
+    width: 465px;
+    font-family: Zen Kaku Gothic New;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    text-align: left;
+    @media screen and (max-width: 1200px) {
+        width: 360px;
+    }
+    @include max(lg){
+        width: 100%;
+    }
+}
+.about-deriv-contents-overview__pic-name{
+    position: relative;
+    font-family: Zen Kaku Gothic New;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.0;
+    text-align: left;
+    color: #4282B8;
+    padding-top: 56px;
+}
+.about-deriv-contents-overview__pic-name::before {
+    position: absolute;
+    content: '代表取締役';
+    top: 16px;
+    font-family: Zen Kaku Gothic New;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.0;
+    text-align: left;
+    color: #000000;
+}
+.about-deriv-contents-overview-list {
+    
+    padding-top: 80px;
+    padding-right: 207px;
+    text-align: left;
+    @include max(exlg){
+        padding-right: 100px;
+    }
+
+    @media screen and (max-width: 922px){
+        padding-right: 40px;
+    }
+    @include max(md){
+        padding-right: 20px;
+    }
+
+}.about-deriv-contents-overview-list__child:nth-of-type(1){
+    padding-top: 0;
+}
+.about-deriv-contents-overview-list__child {
+    
+    padding: 30px 0;
+    font-family: Zen Kaku Gothic New;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    border-bottom: 1px solid #B1C6DC;
+}
+.about-deriv-contents-overview-list__child ul{
+    display: flex;
+    gap: 160px;
+    @include max(md){
+        gap: 100px;
+    }
+    @include max(sm){
+        gap: 20px;
+    }
+}
+.about-deriv-contents-overview-list__child li:nth-of-type(1){
+    width: 80px;
+
+}
+.about-deriv-contents-overview-list__child span{
+    font-family: Zen Kaku Gothic New;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: left;
+}
+.about-deriv-contents-attempt {
+    padding-top: 52px;
+    padding-right: 20px;
+    @include max(md){
+        padding-left: 20px;
+    }
+}
+.about-deriv-contents-attempt__inner {
+    @media screen and (min-width: 1800px){
+        margin-left: 250px;
+    }
+  
+}
+.about-deriv-contents-attempt__title--main{
+    font-size: 32px;
+}
+.about-deriv-contents-attempt__title--sub{
+    font-size: 24px;
+}
+.about-deriv-contents-attempt__title--sub {
+    padding-top: 90px;
+    @include max(md){
+        padding-top: 30px;
+    }
+}
+.about-deriv-contents-attempt__pic-wrapper {
+    padding-top: 40px;
+    display: flex;
+    gap: 44px;
+    @include max(exlg){
+        gap: 20px;
+    }
+    @include max(lg){
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    @include max(sm){
+        padding-top: 20px;
+    }
+  
+}
+.about-deriv-contents-attempt__sentense {
+    font-family: Zen Kaku Gothic New;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    text-align: left;
+    width: 642px;
+    @include max(exlg){
+        width: 470px;
+    }
+    @include max(lg){
+        width: 550px;
+    }
+    @include max(sm){
+        width: 100%;
+    }
+
+}
+.about-deriv-contents-attempt__pic {
+    width: 267px;
+    @include max(lg){
+        width: 550px;
+    }
+    @include max(sm){
+        width: 100%;
+    }
+}
+.about-deriv-contents-attempt__title--sec {
+    padding-top: 35px;
+    font-size: 24px;
+}
+.about-deriv-contact-aobtn {
+    margin-top: 190px;
+    @include max(sm){
+        margin-top: 100px;
+    }
+}
+.about.footer-aobtn  {
+    padding-top: 80px;
+}
